@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Pista e carros</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+<h1>Pista e carros: Partes 1 e 2</h1>
+<div class="wrap">
+<canvas id="c" width="1080" height="1920"></canvas>
+<div class="side">
+<section class="panel">
+  <label for="sp"><b>Velocidade da câmera:</b> <span id="spv">300</span></label>
+  <input id="sp" type="range" min="0" max="1500" value="300">
+  <div class="row" style="margin-top:12px">
+    <button id="pause">Pausar</button>
+    <button id="fin" class="main">Linha de chegada</button>
+  </div>
+</section>
+<section class="panel" id="ctl">
+  <h2 style="font-size:18px;margin:0 0 8px">Simular a live</h2>
+  <div class="row">
+    <input id="user" value="joao" maxlength="14" aria-label="Nome do usuário" style="font:inherit;padding:8px 10px;border-radius:8px;border:1px solid var(--line);background:var(--bg);color:var(--ink);min-width:0;width:110px">
+    <button class="main" data-a="comment">Comentar (entrar)</button>
+    <button data-a="like">Curtidas +15</button>
+    <button data-a="g0">Presente pequeno</button>
+    <button data-a="g1">Presente médio</button>
+    <button data-a="g2">Presente grande</button>
+    <button data-a="rand">+5 aleatórios</button>
+    <button data-a="start">Iniciar agora</button>
+  </div>
+  <ul id="feed" style="margin:8px 0 0;padding-left:18px;min-height:100px;color:var(--muted)"></ul>
+</section>
+<section class="panel">
+  <small>A câmera anda para a direita, então a pista, a calçada e as placas correm para a esquerda. A pista tem 6 faixas, com linha dupla amarela no meio. No topo fica o cenário de cidade (imagem); o minimapa e o TOP 5 entram por cima na Parte 3.</small>
+</section>
+</div>
+</div>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
