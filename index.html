@@ -20,10 +20,19 @@
     <button id="fin" class="main">Linha de chegada</button>
   </div>
 </section>
+<section class="panel">
+  <div class="row">
+    <button id="snd">🔇 Ativar som</button>
+    <label for="vol">Volume</label>
+    <input id="vol" type="range" min="0" max="100" value="40" style="width:140px" aria-label="Volume">
+  </div>
+  <p style="margin:8px 0 0"><small>O navegador só libera o som depois de um clique, por isso o botão. Motor, contagem, largada, vitória e avisos são sons criados por código.</small></p>
+</section>
 <section class="panel" id="ctl">
   <h2 style="font-size:18px;margin:0 0 8px">Simular a live</h2>
   <div class="row">
     <input id="user" value="joao" maxlength="14" aria-label="Nome do usuário" style="font:inherit;padding:8px 10px;border-radius:8px;border:1px solid var(--line);background:var(--bg);color:var(--ink);min-width:0;width:110px">
+    <input id="txt" placeholder="comentário (ex.: fusca)" aria-label="Texto do comentário" style="font:inherit;padding:8px 10px;border-radius:8px;border:1px solid var(--line);background:var(--bg);color:var(--ink);min-width:0;width:170px">
     <button class="main" data-a="comment">Comentar (entrar)</button>
     <button data-a="like">Curtidas +15</button>
     <button data-a="g0">Presente pequeno</button>
@@ -31,7 +40,11 @@
     <button data-a="g2">Presente grande</button>
     <button data-a="rand">+5 aleatórios</button>
     <button data-a="start">Iniciar agora</button>
+    <button data-a="s1">Teste: 100 entradas</button>
+    <button data-a="s2">Teste: chuva de eventos</button>
+    <label style="display:flex;gap:6px;align-items:center"><input type="checkbox" id="lite"> Modo leve (PC fraco)</label>
   </div>
+  <p id="perf" style="margin:8px 0 0;font:12px monospace;color:var(--muted)">FPS…</p>
   <ul id="feed" style="margin:8px 0 0;padding-left:18px;min-height:100px;color:var(--muted)"></ul>
 </section>
 <section class="panel">
